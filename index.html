@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>My First Object</title>
+  </head>
+  <body>
+
+    <script>
+
+      var car = {
+        make: "Honda",
+        model: "Fit",
+        color: "Blue Raspberry",
+        mileage: 3000,
+        isWorking: true,
+      }
+      var tractor ={
+        make: 'tractorMaker',
+        mileage: 5000,
+      }
+        
+       let driveToWork = (obj) => {
+
+          alert("Old Mileage: " + obj.mileage);
+          obj.mileage = obj.mileage + 8;
+          alert("New mileage: " + obj.mileage);
+        }
+        
+        driveToWork(tractor);
+        driveToWork(car);
+
+
+        let driveAroundWorld = (obj) => {
+          alert("Old Mileage: " + obj.mileage);
+
+          obj.mileage = obj.mileage + 24000;
+          alert("New Mileage: " + obj.mileage);
+          alert("Vehicle needs a tuneup!");
+
+          obj.isWorking = false;
+        }
+
+        driveAroundWorld(tractor);
+        driveAroundWorld(car);
+
+        let getTuneUp = (obj) => {
+          alert("Vehicle is ready to go!");
+          obj.isWorking = true;
+        }
+
+        getTuneUp(tractor);
+        getTuneUp(car);
+
+         var honk = (obj) => {
+          alert("Honk! Honk!");
+        }
+     
+        honk(tractor);
+        honk(car);
+      
+
+
+      // How would we log...
+
+      // The car's make?
+      console.log(car.make)
+
+      // The car's model?
+      console.log(car.model)
+      // The car's mileage?
+      console.log(car.mileage)
+      // How would we run the car's driveToWork method?
+      car.driveToWork()
+      // How would we run the car's driveAroundWorld method?
+      car.driveAroundWorld()
+      // How would we run the getTuneUp method?
+      car.getTuneUp()
+    </script>
+    
+  </body>
+</html>
